@@ -21,13 +21,96 @@ Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
 
 ### Font
 
-- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
-- Weights: 400
-
-- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+font-family: 'Big Shoulders Display', cursive;
 - Weights: 700
+font-family: 'Lexend Deca', sans-serif;
+- Weights: 400
  */
+:root {
+  --paragraph-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+  background-color: var(--very-light-gray);
+}
+.container-md {
+  margin: 8% auto;
+  max-width: 950px;
+}
+.container-cards {
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 27px;
+}
+.card-sedan {
+  background-color: hsl(31, 77%, 52%);
+  padding: 30px 50px 30px 50px;
+  border-radius: 10px 0 0 10px;
+}
+.card-suvs {
+  background-color: hsl(184, 100%, 22%);
+  padding: 30px 50px 30px 50px;
+}
+.card-luxury {
+  background-color: hsl(179, 100%, 13%);
+  padding: 30px 50px 30px 50px;
+  border-radius: 0 10px 10px 0;
+}
 
+.icon {
+  width: 60px;
+  margin: 20px 0;
+}
+.title {
+  margin: 20px 0 30px 0;
+  color: var(--very-light-gray);
+  font-size: 40px;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text {
+  margin: 15px 0;
+  color: var(--paragraph-white);
+}
+.learn-more {
+  margin: 55px 0 20px 0;
+  padding: 11px;
+  width: 150px;
+  align-items: start;
+  background-color: white;
+  border: 0 solid var(--very-light-gray);
+  border-radius: 30px;
+}
+.button-sedan {
+  color: hsl(31, 77%, 52%);
+  border: 2px solid var(--very-light-gray);
+}
+.button-suvs {
+  color: hsl(184, 100%, 22%);
+  border: 2px solid var(--very-light-gray);
+}
+.button-luxury {
+  color: hsl(179, 100%, 13%);
+  border: 2px solid var(--very-light-gray);
+}
+.button-sedan:active {
+  background-color: hsl(31, 77%, 52%);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+.button-suvs:active {
+  background-color: hsl(184, 100%, 22%);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+.button-luxury:active {
+  background-color: hsl(179, 100%, 13%);
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
 /* footer */
 .attribution {
   font-size: 11px;
@@ -35,4 +118,12 @@ Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 600px) {
+  .card-sedan {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-luxury {
+    border-radius: 0 0 10px 10px;
+  }
 }
